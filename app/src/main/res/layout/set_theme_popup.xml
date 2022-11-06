@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/set_theme_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/set_theme_panel"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/add_popup"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/close_set_theme"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/close_gray" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="设置主题颜色"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_size_medium" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_blue"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/choice_not_selected"
+                    android:text="经典蓝"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <Button
+                    android:id="@+id/btn_green"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/choice_not_selected"
+                    android:text="竹林绿"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <Button
+                    android:id="@+id/btn_red"
+                    android:layout_width="85dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/choice_not_selected"
+                    android:text="典雅红"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/set_theme_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/btn_selector"
+                android:text="设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

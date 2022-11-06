@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/item_detail_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000" />
+
+    <LinearLayout
+        android:id="@+id/item_detail_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/item_detail_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/item_detail_pic"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/top_round_rect"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/item_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:roundBottomLeft="false"
+                    fresco:roundBottomRight="false"
+                    fresco:roundedCornerRadius="30dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/rect_solid2trans" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/close_item_detail"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/close_gray" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/item_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:shadowColor="#000000"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10"
+                        android:text="物件"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/item_detail_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暂未描述具体位置"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/item_detail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="2022年5月28日存"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_small" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/show_add_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="设置定时提醒"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/timer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/timer_detail_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:text="提醒"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/delete_icon"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/add_timer_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/timer_spinner"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:spinnerMode="dialog"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <EditText
+                        android:id="@+id/timer_hour"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:text="15"
+                        android:textAlignment="center"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="时"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <EditText
+                        android:id="@+id/timer_min"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:text="20"
+                        android:textAlignment="center"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="分"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/font_size_small" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/set_timer_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/btn_selector"
+                    android:text="设置"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

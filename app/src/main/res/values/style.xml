@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tabLayout_testStyle" parent="TextAppearance.Design.Tab">
+        <!--此处可用dp也可以用sp都可以,任选一个-->
+        <item name="android:textSize">@dimen/font_size_small</item>
+<!--        <item name="android:textStyle">bold</item>-->
+    </style>
+
+    <style name="contextMenuAnim" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/context_menu_enter</item>
+        <item name="android:windowExitAnimation">@anim/context_menu_exit</item>
+    </style>
+
+    <style name="BlueTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/theme_blue</item>// App Bar 颜色
+        <item name="colorPrimaryDark">@color/theme_blue</item>//状态栏颜色
+        <item name="colorAccent">@color/bottom_green</item>//控件选中状态下的颜色
+        <item name="android:windowBackground">@color/bg_light_gray</item>//窗口背景颜色
+        <item name="mainColor">@color/theme_blue</item>
+        <item name="bottomColor">@color/bottom_blue</item>
+        <item name="alertColor">@color/warning_red</item>
+    </style>
+
+    <style name="GreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/theme_green</item>// App Bar 颜色
+        <item name="colorPrimaryDark">@color/theme_green</item>//状态栏颜色
+        <item name="colorAccent">@color/bottom_blue</item>//控件选中状态下的颜色
+        <item name="android:windowBackground">@color/bg_light_gray</item>//窗口背景颜色
+        <item name="mainColor">@color/theme_green</item>
+        <item name="bottomColor">@color/bottom_green</item>
+        <item name="alertColor">@color/warning_red</item>
+    </style>
+
+
+    <style name="RedTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#882121</item>// App Bar 颜色
+        <item name="colorPrimaryDark">#9C4444</item>//状态栏颜色
+        <item name="colorAccent">#D8D16236</item>//控件选中状态下的颜色
+        <item name="android:windowBackground">@color/bg_light_gray</item>//窗口背景颜色
+        <item name="mainColor">@color/theme_green</item>
+        <item name="bottomColor">@color/bottom_green</item>
+        <item name="alertColor">@color/warning_red</item>
+    </style>
+
+
+</resources>

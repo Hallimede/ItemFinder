@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- 填充颜色 -->
+    <solid android:color="#98A8D3"/>
+    <stroke
+        android:width="2dp"
+        android:color="?attr/colorAccent"/>
+
+
+</shape>
